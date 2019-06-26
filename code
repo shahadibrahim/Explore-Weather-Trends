@@ -1,0 +1,8 @@
+select city_data.country,city_data.city,city_data.year,city_data.avg_temp as
+city_avg_temp,global_data.avg_temp as global_avg_temp
+from city_list
+join city_data
+On city_list.city=city_data.city
+join global_data
+on global_data.year=city_data.year
+where city_list.city='Riyadh';
